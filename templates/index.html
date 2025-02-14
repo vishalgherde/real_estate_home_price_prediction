@@ -1,0 +1,35 @@
+<!-- Main frontend file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🏡 Home Price Prediction</h1>
+
+        <label for="location">Select Location:</label>
+        <select id="location">
+            <option value="" disabled selected>Loading locations...</option>
+        </select>
+
+        <label for="sqft">Total Square Feet:</label>
+        <input type="number" id="sqft" placeholder="Enter sqft">
+
+        <label for="bhk">BHK:</label>
+        <input type="number" id="bhk" placeholder="Enter BHK">
+
+        <label for="bath">Bathrooms:</label>
+        <input type="number" id="bath" placeholder="Enter Bathrooms">
+
+        <button onclick="predictPrice()">Predict Price</button>
+
+        <h2 id="result">Estimated Price: ₹ --</h2>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
