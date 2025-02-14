@@ -1,6 +1,6 @@
 # Flask application
 from flask import Flask, request, jsonify, render_template
-import util
+from api import util
 
 app = Flask(__name__, template_folder='../templates')  # Point to the templates folder
 
